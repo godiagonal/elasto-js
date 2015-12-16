@@ -1,0 +1,53 @@
+/* square */
+
+.elasto-container .elasto-square {
+	cursor: pointer;
+}
+
+
+/* square background */
+
+.elasto-container .elasto-square-bg {
+	-webkit-filter: grayscale(80%);
+	filter: grayscale(80%);
+	opacity: 0.5;
+	transition: all 0.15s ease-out;
+}
+
+
+/* square text overlay */
+
+.elasto-container .elasto-square-title {
+	margin-bottom: 5px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	font-size: 14px;
+}
+
+.elasto-container .elasto-square-description {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	font-size: 13px;
+}
+
+
+/* square background when active */
+
+.elasto-container .elasto-square.active .elasto-square-bg,
+.elasto-container .elasto-square.active:hover .elasto-square-bg {
+	-webkit-filter: grayscale(0%);
+	filter: grayscale(0%);
+	box-shadow: 0 0 7px 1px #808080;
+	outline: 1px solid #9d9a9a;
+}
+
+
+/* square background on hover */
+
+.elasto-container .elasto-square:hover .elasto-square-bg {
+	-webkit-filter: grayscale(20%);
+	filter: grayscale(20%);
+}
