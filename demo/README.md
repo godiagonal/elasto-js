@@ -6,4 +6,4 @@ Download the source package or visit the
 
 Note: It's a good idea to override elasto.css styles in a custom css file to
 avoid loss of data when updating to a new version of the library. See
-[elasto-custom.css](demo/css/elasto-custom.css) for an example on how to do this.
+[elasto-custom.css](css/elasto-custom.css) for an example on how to do this.
