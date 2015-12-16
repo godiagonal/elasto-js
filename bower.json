@@ -1,6 +1,6 @@
 {
 	"name": "elasto.js",
 	"version": "0.1.0",
-	"main": "./dist/elasto.min.js",
+	"main": "dist/elasto.min.js",
 	"license": "MIT"
 }
