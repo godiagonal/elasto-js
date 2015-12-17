@@ -2,7 +2,7 @@ var testData = [],
 	grid;
 
 // Generate test data.
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 20; i++) {
 	testData.push({
 		id: i + 1,
 		title: 'Image ' + (i + 1),
@@ -24,8 +24,8 @@ $(function () {
 		
 		// Bind select event (click or enter key).
 		select: function (obj) {
-			console.log('Selected: ' + obj.id);
-			alert('Selected ' + obj.title);
+			console.log('Removing: ' + obj.id);
+			grid.remove(obj.elastoId);
 		},
 		
 		// Specify which properties of the data to display in the grid.
@@ -45,11 +45,6 @@ $(function () {
 		}
 
 	});
-	
-	grid.options.select = function (obj) {
-		// elastoId is added to every object upon creating the grid and adding new objects
-		grid.remove(obj.elastoId).add(obj);
-	};
 
 	// Add another image after 1 second and then move to it.
 	setTimeout(function () {
@@ -58,7 +53,7 @@ $(function () {
 			title: 'I\'m a new image',
 			text: 'I was dynamically added to the grid.',
 			image: ''
-		}).moveTo(grid.count);
-	}, 1000);
+		});
+	}, 2000);
 
 });

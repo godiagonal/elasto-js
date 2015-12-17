@@ -70,7 +70,7 @@ var data = [
 ];
 ````
 
-To create your grid we have to create an instance of Elasto. This can be done either
+To create a grid we have to create an instance of Elasto. This can be done either
 with native JavaScript or jQuery. The parameters are the same either way.
 
 The native JS way:
@@ -90,7 +90,7 @@ var grid = new Elasto('id-of-grid-container', data, {
 		'title': 'This is {{name}}' // Add a title attribute to every image
 	},
 	select: function (obj) {
-		alert('I am ' + obj.name + ' and I have been chosen!');
+		alert('I am ' + obj.name + ' and I have been chosen!'); // Alert when an image is clicked
 	}
 });
 
@@ -161,7 +161,7 @@ such: `'title': 'This is {{user.name}}'`
 
 Minimum width and height for squares in pixels. When the grid is resized and 
 the squares fall below this threshold the number of squares per row will decrease
-and thus the size of each square is increased to fill the row width.
+by one and thus the size of each square is increased to fill the row width.
 
 ### hideIncompleteRow
 
@@ -433,7 +433,7 @@ in the same ways as the `.elasto-square-title`.
 ### .elasto-square.active
 
 This is the elasto square when it's active (moved to with arrow keys) and is commonly
-used together with `.elasto-square-bg` and `.elasto-square-wrap` to clearify which
+used together with `.elasto-square-bg` and `.elasto-square-wrap` to clarify which
 image is active.
 
 ```css
