@@ -11,27 +11,25 @@ and Wauv.it.
   * Built in native JS with optional jQuery support.
   * Works in all major browsers and on mobile.
   
-# Documentation
-
-## Installation
+# Installation
 
 Download files and include in project. Both JS and css.
 
-````
-blabla
+````html
+<yay></yay>
 ````
 
-## Usage
+# Usage
 
 Create an Elasto instance.
 
-````
+````javascript
 blabla
 ````
 
 Describe what kind of data can be used.
 
-## Options
+# Options
 
 ### keyEventsEnabled
 
@@ -39,7 +37,7 @@ Describe what kind of data can be used.
 
 This is an option.
 
-````
+````javascript
 keyEventsEnabled = false;
 ````
 
@@ -49,19 +47,19 @@ keyEventsEnabled = false;
 
 This is another option.
 
-````
+````javascript
 click: function (obj) {
 	alert('You clicked ' + obj.title);
 }
 ````
 
-## JavaScript API
+# JavaScript API
 
 ### elasto.options
 
 This is a property.
 
-````
+````javascript
 elasto.options.trackActive = true;
 ````
 
@@ -72,11 +70,11 @@ This is a method.
 Arguments:
   * *arg1 (optional)* - Some data.
 
-````
+````javascript
 elasto.reload(data);
 ````
 
-## Styling
+# Styling
 
 Elasto.js comes with a css file containing some basic styling, see
 [elasto.css](dist/css/elasto.css).
