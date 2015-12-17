@@ -14,7 +14,8 @@ module.exports = function (grunt) {
 
 	// Modules to be included in the build
 	var MODULE_LIST = [
-      	sub('src/%s.easing.js')
+      	sub('src/%s.easing.js'),
+		sub('src/%s.jquery.js')
     ];
 
 	// Gets inserted into dist version

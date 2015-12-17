@@ -1,8 +1,6 @@
 /**
  * Init wrapper for the Elasto easing module.
  * @param {Object} The Object that Elasto gets attached to in elasto.init.js.
- * If Elasto was not loaded with an AMD loader such as require.js, this is
- * the global Object.
  */
 function initElastoEasing(context) {
 

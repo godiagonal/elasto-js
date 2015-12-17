@@ -1,14 +1,14 @@
-/*global initElastoCore initElastoEasing */
+/*global initElastoCore initElastoEasing initElastoJquery */
 
 var initElasto = function (context) {
 
 	initElastoCore(context);
 	initElastoEasing(context);
+	initElastoJquery(context);
 
 	return context.Elasto;
 
 };
-
 
 if (typeof define === 'function' && define.amd) {
 

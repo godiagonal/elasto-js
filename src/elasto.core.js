@@ -11,7 +11,6 @@ if (typeof DEBUG === 'undefined') {
 var Fn = Function,
 	GLOBAL = new Fn('return this')();
 
-
 // GLOBAL METHODS
 //
 // The methods here are exposed to all Elasto modules. Because all of the
@@ -54,7 +53,7 @@ function initElastoCore(context) {
 
 	/**
 	 * This is the constructor for the Elasto object.
-	 * @param {number} containerId Id attribute of the desired container element.
+	 * @param {number} containerId Id of element to use as container for the grid.
 	 * @param {array.<object>} data Initial array of objects to be rendered in the grid.
 	 * @param {object} options Object of containing options for the grid.
 	 * @constructor
@@ -290,7 +289,7 @@ function initElastoCore(context) {
 		};
 
 		/**
-		 * Recalculate dimensions of all grid squares to fit the new containerId
+		 * Recalculate dimensions of all grid squares to fit the new container
 		 * size after window.resize has been triggered.
 		 */
 		var _doResize = function () {

@@ -14,7 +14,7 @@ for (var i = 0; i < 10; i++) {
 $(function () {
 
 	// Create the grid.
-	grid = new Elasto('grid', testData, {
+	grid = $('#grid').elasto(testData, {
 		
 		// Bind move event.
 		move: function (obj) {
