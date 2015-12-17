@@ -135,7 +135,7 @@ displayProperties: {
 }
 ````
 
-In the future you will be able to use nested properties with dot notation as
+**Note:** In the future you will be able to use nested properties with dot notation as
 such: `image: 'user.profile_picture'`
 
 ### customAttributes
@@ -152,7 +152,7 @@ customAttributes: {
 }
 ````
 
-In the future you will be able to use nested properties with dot notation as
+**Note:** In the future you will be able to use nested properties with dot notation as
 such: `'title': 'This is {{user.name}}'`
 
 ### minSize
