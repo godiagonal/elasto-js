@@ -1,4 +1,4 @@
-# Elasto.js v0.1.0
+# Elasto.js
 
 Description goes here. Link to [demo](https://godiagonal.github.com/elasto-js/demo)
 and Wauv.it.
@@ -10,6 +10,11 @@ and Wauv.it.
   * Lightweight and without dependencies.
   * Built in native JS with optional jQuery support.
   * Works in all major browsers and on mobile.
+  
+### Known issues
+
+  * No jQuery support not working. This will be resolved soon.
+  * Shitty live demo.
   
 # Installation
 
@@ -81,7 +86,7 @@ Elasto.js comes with a css file containing some basic styling, see
 
 It's a good idea to override these
 styles in a custom css file to avoid loss of data when updating to a new
-version of the library. See [elasto-custom.css](css/elasto-custom.css)
+version of the library. See [elasto-custom.css](demo/css/elasto-custom.css)
 for an example on how to do this.
 
 ### .elasto
