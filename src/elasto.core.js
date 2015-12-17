@@ -168,7 +168,7 @@ function initElastoCore(context) {
 			var elem = _getTemplateElem();
 
 			elem.style.width = _squareSize + '%';
-			elem.setAttribute('data-id', index + 1);
+			elem.setAttribute('data-elasto-id', index + 1);
 
 			// Set custom attributes, makes use of handlebar notation.
 			for (var key in _options.customAttributes) {
@@ -211,6 +211,7 @@ function initElastoCore(context) {
 
 			elem.addEventListener('click', _click);
 
+			_data[index].elastoId = index + 1;
 			_data[index].elem = elem;
 			_container.appendChild(elem);
 
@@ -587,10 +588,10 @@ function initElastoCore(context) {
 		 */
 		var _click = function (e) {
 
-			var id = parseInt(e.target.getAttribute('data-id'), 10);
+			var id = parseInt(e.target.getAttribute('data-elasto-id'), 10);
 
 			if (!id)
-				id = parseInt(e.target.parentElement.getAttribute('data-id'), 10);
+				id = parseInt(e.target.parentElement.getAttribute('data-elasto-id'), 10);
 
 			if (id) {
 
