@@ -14,7 +14,6 @@ if (typeof DEBUG === 'undefined') {
 var Fn = Function,
 	GLOBAL = new Fn('return this')();
 
-
 // GLOBAL METHODS
 //
 // The methods here are exposed to all Elasto modules. Because all of the
@@ -57,7 +56,7 @@ function initElastoCore(context) {
 
 	/**
 	 * This is the constructor for the Elasto object.
-	 * @param {number} containerId Id attribute of the desired container element.
+	 * @param {number} containerId Id of element to use as container for the grid.
 	 * @param {array.<object>} data Initial array of objects to be rendered in the grid.
 	 * @param {object} options Object of containing options for the grid.
 	 * @constructor
@@ -293,7 +292,7 @@ function initElastoCore(context) {
 		};
 
 		/**
-		 * Recalculate dimensions of all grid squares to fit the new containerId
+		 * Recalculate dimensions of all grid squares to fit the new container
 		 * size after window.resize has been triggered.
 		 */
 		var _doResize = function () {
@@ -1010,8 +1009,6 @@ function initElastoCore(context) {
 /**
  * Init wrapper for the Elasto easing module.
  * @param {Object} The Object that Elasto gets attached to in elasto.init.js.
- * If Elasto was not loaded with an AMD loader such as require.js, this is
- * the global Object.
  */
 function initElastoEasing(context) {
 
@@ -1044,17 +1041,43 @@ function initElastoEasing(context) {
 	};
 
 }
-/*global initElastoCore initElastoEasing */
+/*global $ */
+
+/**
+ * Init wrapper for the Elasto jQuery module.
+ * @param {Object} The Object that Elasto gets attached to in elasto.init.js.
+ */
+function initElastoJquery(context) {
+
+	'use strict';
+
+	if (!context.jQuery)
+		return;
+
+	/**
+	 * Wrap new Elasto instance in jQuery method for convenience.
+	 * @param {array.<object>} data Initial array of objects to be rendered in the grid.
+	 * @param {object} options Object of containing options for the grid.
+	 */
+	$.fn.elasto = function (data, options) {
+		if (this.length === 1)
+			return new context.Elasto($(this).attr('id'), data, options);
+		else
+			return this;
+	};
+
+}
+/*global initElastoCore initElastoEasing initElastoJquery */
 
 var initElasto = function (context) {
 
 	initElastoCore(context);
 	initElastoEasing(context);
+	initElastoJquery(context);
 
 	return context.Elasto;
 
 };
-
 
 if (typeof define === 'function' && define.amd) {
 

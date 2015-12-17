@@ -1,6 +1,6 @@
 # Elasto.js
 
-Description goes here. Link to [demo](https://godiagonal.github.com/elasto-js/demo)
+Description goes here. Link to [demo](https://godiagonal.github.io/elasto-js/demo)
 and Wauv.it.
 
 ### Features
@@ -13,7 +13,6 @@ and Wauv.it.
   
 ### Known issues
 
-  * No jQuery support not working. This will be resolved soon.
   * Shitty live demo.
   
 # Installation
@@ -26,13 +25,14 @@ Download files and include in project. Both JS and css.
 
 # Usage
 
-Create an Elasto instance.
+Create an Elasto instance. jQuery and native.
 
 ````javascript
 blabla
 ````
 
 Describe what kind of data can be used.
+Methods can be chained.
 
 # Options
 
