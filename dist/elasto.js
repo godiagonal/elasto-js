@@ -1,4 +1,4 @@
-/*! elasto.js - v0.1.0 - 2015-12-16 - [object Object] */
+/*! elasto.js - v0.1.0 - 2015-12-17 - [object Object] */
 ;(function (global) {
 
 /*jshint loopfunc: true */
