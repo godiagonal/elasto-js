@@ -2,7 +2,7 @@ var testData = [],
 	grid;
 
 // Generate test data.
-for (var i = 0; i < 10; i++) {
+for (var i = 0; i < 5; i++) {
 	testData.push({
 		id: i + 1,
 		title: 'Image ' + (i + 1),
@@ -13,7 +13,8 @@ for (var i = 0; i < 10; i++) {
 
 $(function () {
 
-	// Create the grid.
+	// Create the grid. This could also be done in native JS with the following syntax:
+	// grid = new Elasto('id-of-grid-container', data, options);
 	grid = $('#grid').elasto(testData, {
 		
 		// Bind move event.
@@ -44,6 +45,11 @@ $(function () {
 		}
 
 	});
+	
+	grid.options.select = function (obj) {
+		// elastoId is added to every object upon creating the grid and adding new objects
+		grid.remove(obj.elastoId).add(obj);
+	};
 
 	// Add another image after 1 second and then move to it.
 	setTimeout(function () {
