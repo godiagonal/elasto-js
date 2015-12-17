@@ -2,7 +2,7 @@ var testData = [],
 	grid;
 
 // Generate test data.
-for (var i = 0; i < 5; i++) {
+for (var i = 0; i < 10; i++) {
 	testData.push({
 		id: i + 1,
 		title: 'Image ' + (i + 1),

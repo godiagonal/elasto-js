@@ -1,30 +1,42 @@
 /* Container */
 
 .elasto-container:after {
-	content: ''; /* Don't change this */
-	display: table; /* Don't change this */
-	clear: both; /* Don't change this */
+	/* Don't change this */
+	content: '';
+	/* Don't change this */
+	display: table;
+	/* Don't change this */
+	clear: both;
 }
 
 
 /* Square */
 
 .elasto-container .elasto-square {
-	position: relative; /* Don't change this */
-	float: left; /* Don't change this */
+	/* Don't change this */
+	position: relative;
+	/* Don't change this */
+	float: left;
 }
 
 
 /* Square background */
 
 .elasto-container .elasto-square-bg {
-	z-index: -1; /* Don't change this unless necessary */
-	position: absolute; /* Don't change this */
-	width: calc(100% - 10px); /* This dictates the coverage area of the bg */
-	height: calc(100% - 10px); /* This dictates the coverage area of the bg */
-	margin: 5px; /* This dictates the coverage area of the bg */
-	background-repeat: no-repeat; /* Don't change this */
-	background-size: cover; /* Don't change this */
+	/* Don't change this unless necessary */
+	z-index: -1;
+	/* Don't change this */
+	position: absolute;
+	/* Don't change this */
+	background-repeat: no-repeat;
+	/* Don't change this */
+	background-size: cover;
+	/* This dictates the coverage area of the bg */
+	width: calc(100% - 10px);
+	/* This dictates the coverage area of the bg */
+	height: calc(100% - 10px);
+	/* This dictates the coverage area of the bg */
+	margin: 5px;
 	background-image: linear-gradient(135deg, #a29495, #ad6d61);
 	opacity: 0.7;
 }
@@ -33,8 +45,10 @@
 /* Square text overlay */
 
 .elasto-container .elasto-square-wrap {
-	position: absolute; /* Don't change this */
-	bottom: 0; /* This could be removed if you want the text overlay in the top */
+	/* Don't change this */
+	position: absolute;
+	/* This could be removed if you want the text overlay in the top */
+	bottom: 0;
 	width: calc(100% - 30px);
 	margin: 5px;
 	padding: 10px;
@@ -45,9 +59,7 @@
 	font-weight: bold;
 }
 
-.elasto-container .elasto-square-description {
-	
-}
+.elasto-container .elasto-square-description {}
 
 
 /* Square background when active */
