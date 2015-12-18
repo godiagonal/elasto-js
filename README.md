@@ -17,8 +17,8 @@ live example of this using the SoundCloud API visit my other project
   * Supports common keyboard and mouse events to select objects in the grid.
   * Arrow keys can be used to move through the grid in all directions.
   * Easy to dynamically add, remove or replace objects in the grid. 
-  * Lightweight and without dependencies.
-  * Built in native JS with optional jQuery support.
+  * Lightweight, less than 7 kb.
+  * No dependencies, built in native JS with optional jQuery support.
   * Works in all major browsers and on mobile.
   
 ### Known issues
