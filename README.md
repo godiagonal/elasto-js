@@ -23,7 +23,6 @@ live example of this using the SoundCloud API visit my other project
   
 ### Known issues
 
-  * The sandbox demo isn't finished.
   * Doesn't have built in paging. For now this can be managed from outside the library depending on the needs of your application.
 
 ### Contents
@@ -307,7 +306,7 @@ elasto.resize();
 Reload the grid with new data or reload the grid with current data.
 
 Arguments:
-  * *newData **(optional)*** - The new data to use in the grid.
+  * *newData (optional)* - The new data to use in the grid.
 
 ````javascript
 // Trigger a reload without changing the data

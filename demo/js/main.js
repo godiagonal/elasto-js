@@ -1,13 +1,14 @@
 var testData = [],
+	gridInterface,
 	grid;
 
 // Generate test data.
-for (var i = 0; i < 20; i++) {
+for (var i = 0; i < 12; i++) {
 	testData.push({
 		id: i + 1,
 		title: 'Image ' + (i + 1),
 		text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-		image: ''
+		image: 'https://unsplash.it/600/600?image=' + i * 10
 	});
 }
 
@@ -17,17 +18,6 @@ $(function () {
 	// grid = new Elasto('id-of-grid-container', data, options);
 	grid = $('#grid').elasto(testData, {
 		
-		// Bind move event.
-		move: function (obj) {
-			console.log('Moved to: ' + obj.id);
-		},
-		
-		// Bind select event (click or enter key).
-		select: function (obj) {
-			console.log('Removing: ' + obj.id);
-			grid.remove(obj.elastoId);
-		},
-		
 		// Specify which properties of the data to display in the grid.
 		displayProperties: {
 			image: 'image', // Property that holds the url to the image.
@@ -36,7 +26,7 @@ $(function () {
 		},
 		
 		// Minimum square size in px.
-		minSize: 200,
+		minSize: 300,
 		
 		// Add a html title attribute to every image. Use handlebar
 		// notation to select dynamic values of properties.
@@ -45,15 +35,38 @@ $(function () {
 		}
 
 	});
-
-	// Add another image after 1 second and then move to it.
-	setTimeout(function () {
-		grid.add({
-			id: 99,
-			title: 'I\'m a new image',
-			text: 'I was dynamically added to the grid.',
-			image: ''
-		});
-	}, 2000);
-
+	
+	// Bind sandbox interface controls.
+	initSandbox(grid);
+	
 });
+
+function initSandbox(grid) {
+	
+	var gi = new elastoInterface(grid);
+	var gui = new dat.GUI();
+	var f1 = gui.addFolder('Options');
+	var f3 = gui.addFolder('Events');
+	var f2 = gui.addFolder('Methods');
+	
+	f1.open();
+	f2.open();
+	f3.open();
+	
+	f1.add(gi, 'minSize', 100, 800);
+	f1.add(gi, 'hideIncompleteRow', true, false);
+	f1.add(gi, 'trackActive', true, false);
+	f1.add(gi, 'trackAnimation', true, false);
+	f1.add(gi, 'keyEventsEnabled', true, false);
+	f2.add(gi, 'empty');
+	f2.add(gi, 'add');
+	f2.add(gi, 'remove');
+	f3.add(gi, 'move', { None: 0, ConsoleLog: 1, Alert: 2 });
+	f3.add(gi, 'enter', { None: 0, ConsoleLog: 1, Alert: 2 });
+	f3.add(gi, 'click', { None: 0, ConsoleLog: 1, Alert: 2 });
+	f3.add(gi, 'select', { None: 0, ConsoleLog: 1, Alert: 2, Remove: 3 });
+	
+	gi.move = 1;
+	gi.select = 2;
+
+}
