@@ -1,4 +1,4 @@
-/*! elasto.js - v0.1.0 - 2015-12-17 - [object Object] */
+/*! elasto.js - v0.1.0 - 2016-01-24 - [object Object] */
 ;(function (global) {
 
 /*jshint loopfunc: true */
@@ -192,8 +192,21 @@ function initElastoCore(context) {
 								return str;
 
 						});
-
-						elem.setAttribute(key, value);
+						
+						// Special case for class since it should not overwrite the existing classes.
+						if (key === 'class') {
+							
+							var classes = value.split(' ');
+							
+							for (var i = 0; i < classes.length; i++)
+								elem.classList.add(classes[i]);
+							
+						}
+						else {
+						
+							elem.setAttribute(key, value);
+							
+						}
 
 					}
 
@@ -996,6 +1009,16 @@ function initElastoCore(context) {
 		this.__defineGetter__('options', function () {
 
 			return _options;
+
+		});
+
+		/**
+		 * The number of columns in the grid.
+		 * @type {number}
+		 */
+		this.__defineGetter__('columnCount', function () {
+
+			return _colCount;
 
 		});
 
