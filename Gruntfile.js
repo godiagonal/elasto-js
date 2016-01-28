@@ -40,7 +40,7 @@ module.exports = function (grunt) {
 	// Gets inserted at the top of the generated files in dist/.
 	var BANNER = [
       	'/*! <%= pkg.name %> - v<%= pkg.version %> - ',
-      	'<%= grunt.template.today("yyyy-mm-dd") %> - <%= pkg.author %> */\n'
+      	'<%= grunt.template.today("yyyy-mm-dd") %> - <%= pkg.author.name %> */\n'
     ].join('');
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
