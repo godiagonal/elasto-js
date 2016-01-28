@@ -12,19 +12,13 @@ live example of this using the SoundCloud API visit my other project
 ### Features
 
   * Images are displayed in a square format and the proportions will be preserved when the grid is resized.
-  * Data in any format can be used as long as it's an array containing objects. This works great for displaying results from an API request.
-  * The format of the original data is preserved and the original objects are returned upon selection.
+  * Data in any format can be used as long as it's an array containing objects. The format is preserved and the original objects are returned upon selection. This works great for displaying results from an API request.
   * Supports common keyboard and mouse events to select objects in the grid.
-  * Arrow keys can be used to move through the grid in all directions.
-  * Easy to dynamically add, remove or replace objects in the grid. 
+  * Easy to dynamically add, remove or replace objects in the grid.
   * Lightweight, less than 7 kb.
   * No dependencies, built in native JS with optional jQuery support.
   * Works in all major browsers and on mobile.
   
-### Known issues
-
-  * Doesn't have built in paging. For now this can be managed from outside the library depending on the needs of your application.
-
 ### Contents
 
   * [Installation](#installation)
@@ -461,6 +455,10 @@ styling behaviour of these separated. This is also commonly used together with
 	/* Do other stuff */
 }
 ```
+
+# Known issues
+
+  * Doesn't have built in paging. For now this can be managed from outside the library depending on the needs of your application.
 
 # License
 
