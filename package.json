@@ -1,7 +1,7 @@
 {
   "name": "elasto.js",
   "description": "Lightweight library for making responsive image grids.",
-  "version": "0.1.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/godiagonal/elasto-js",
   "author": {
     "name": "Samuel Johansson",

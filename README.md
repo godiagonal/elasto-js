@@ -1,4 +1,4 @@
-# Elasto.js v0.1.0
+# Elasto.js v1.0.1
 
 A lightweight library for making responsive image grids that can be interacted with
 through keyboard and mouse events.
