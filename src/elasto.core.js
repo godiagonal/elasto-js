@@ -257,7 +257,7 @@ function initElastoCore(context) {
 
 			var description = document.createElement('div');
 			description.classList.add('elasto-square-description');
-
+			
 			elem.appendChild(bgElem);
 			elem.appendChild(wrapElem);
 			wrapElem.appendChild(title);
@@ -605,6 +605,9 @@ function initElastoCore(context) {
 
 			if (!id)
 				id = parseInt(e.target.parentElement.getAttribute('data-elasto-id'), 10);
+			
+			if (!id)
+				id = parseInt(e.target.parentElement.parentElement.getAttribute('data-elasto-id'), 10);
 
 			if (id) {
 

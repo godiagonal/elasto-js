@@ -1,4 +1,4 @@
-/*! elasto.js - v0.1.0 - 2016-01-24 - [object Object] */
+/*! elasto.js - v0.1.0 - 2016-01-28 - Samuel Johansson */
 ;(function (global) {
 
 /*jshint loopfunc: true */
@@ -260,7 +260,7 @@ function initElastoCore(context) {
 
 			var description = document.createElement('div');
 			description.classList.add('elasto-square-description');
-
+			
 			elem.appendChild(bgElem);
 			elem.appendChild(wrapElem);
 			wrapElem.appendChild(title);
@@ -608,6 +608,9 @@ function initElastoCore(context) {
 
 			if (!id)
 				id = parseInt(e.target.parentElement.getAttribute('data-elasto-id'), 10);
+			
+			if (!id)
+				id = parseInt(e.target.parentElement.parentElement.getAttribute('data-elasto-id'), 10);
 
 			if (id) {
 
