@@ -18,7 +18,7 @@ function elastoInterface(grid) {
 	}
 	this.remove = function () {
 		if (this._grid.count > 0)
-			this._grid.remove(this._grid.data[this._grid.count-1].id);
+			this._grid.remove(this._grid.data[this._grid.count-1].elastoId);
 	}
 }
 
@@ -102,6 +102,6 @@ elastoInterface.prototype = {
 		else if (value == 2)
 			this._grid.options.select = function (obj) { alert('Selected: ' + obj.id); }
 		else if (value == 3)
-			this._grid.options.select = function (obj) { grid.remove(obj.id); }
+			this._grid.options.select = function (obj) { grid.remove(obj.elastoId); }
 	},
 }
